@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container-nav {
+   
+}
+
+.ul-nav {
+    display: flex;
+    list-style-type: none;
+    justify-content:space-around;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.li-nav {
+    color: #5AB885;
+    padding: 10px;
+    font-size: 40px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    text-shadow: 0 4px 4px #0000004a;
+}
+#logo{
+    position: relative;
+    animation: logo 2s linear 1s infinite alternate;
+    
+}
+@keyframes logo {
+    25%{
+        top: 0;
+    }
+    
+    50% {
+        top: -5px;
+        scale: 1.3;
+    }
+    100% {
+        top: 0px;
+    }  
+}
+
+.ul-nav .login-nav {
+    color: #FFFFFF;
+    background-color: #5AB885;
+    border-style: none;
+    border-radius: 10px;
+    padding: 0 30px;
+    font-size: 32px;
+    cursor: pointer;
+    transition: 0.5s;
+    text-shadow: none;
+    box-shadow: 0 4px 4px #0000004a;
+}
+
+.ul-nav .login-nav:hover {
+    scale: 1.1;
+}
+
+.container-content {
+    display: flex;
+    justify-content: center;
+    background-image: linear-gradient(#5AB885, #ECECEC);
+}
+
+.content-home-1 {
+    display: flex;
+    align-items: end;
+}
+
+.gambar-samping img {
+    width: 350px;
+}
+
+.content-dlm {
+    text-align: center;
+}
+
+.content-dlm p {
+    font-size: 48px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    max-width: 15em;
+    font-weight: 550;
+    color: #FFFFFF;
+    text-shadow: 0 4px 4px #0000004a;
+}
+
+.content-dlm img {
+    position: relative;
+    width: 500px;
+    top: 3em;
+}
+
+.content-dlm input {
+    width: 100%;
+    padding: 20px;
+    border-style: none;
+    border-radius: 10px;
+    box-shadow: 0 5px 4px #0000004a;
+}
+
+#search:focus {
+    outline:2px solid #5AB885;
+    outline-offset: -3px;
+}
+.content-dlm input::-webkit-input-placeholder {
+    font-size: 18px;
+    color: #a5a5a5;
+}
+.content-home-2 {
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+    margin:80px 0 40px 0;
+}
+.content-home-2 div {
+    box-shadow: 0 0px 10px #0000004a;
+    overflow: hidden;
+    width: 200px;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+.content-home-2 div:hover{
+    scale: 1.1;
+    outline: 5px solid #5AB885;
+    box-shadow: 0 0px 8px 2px #5AB885;
+    outline-offset: 10px;
+}
+.content-home-2 div img {
+    width: inherit;
+}
+
