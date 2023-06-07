@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .container-nav {
@@ -44,7 +45,6 @@
 }
 
 .ul-nav .login-nav {
-    color: #FFFFFF;
     background-color: #5AB885;
     border-style: none;
     border-radius: 10px;
@@ -54,6 +54,10 @@
     transition: 0.5s;
     text-shadow: none;
     box-shadow: 0 4px 4px #0000004a;
+}
+.ul-nav .login-nav a{
+    text-decoration: none;
+    color: #FFFFFF;
 }
 
 .ul-nav .login-nav:hover {
@@ -133,3 +137,73 @@
     width: inherit;
 }
 
+
+ /* LOGIN */
+.container-login{
+    display: flex;
+    background-color:#5ab88451 ;
+    height: 860px;
+    gap:50px;
+    flex-direction: column;
+    align-items: center;
+}
+.container-login div{
+   position: relative;
+   top : 100px;
+   text-align: center;
+}
+
+div .text-login{
+    font-size: 36px;
+}
+.div-login{
+    border-radius: 20px;
+    padding: 50px;
+    background-color: #FFFFFF;
+    width: auto;
+    height: 400px;
+    box-shadow: 0 5px 4px #0000004a;
+}
+.div-login p{
+    font-size: 20px;
+    padding-bottom: 50px;
+}
+
+.div-login form input {
+    display: block;
+    width: 500px;
+    padding: 12px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    transition: 0.5s;;
+} 
+.div-login form input:focus{
+    box-shadow: 0 5px 4px #5AB885;
+}
+#masuk{
+    display: inline-block;
+    position: relative;
+    width: 140px;
+    margin-bottom: 0;
+    margin-top: 20px;
+    right: -120px;
+    border: none;
+    background-color: #5AB885;
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: large;
+}
+#masuk:hover{
+    cursor: pointer;
+    scale: 1.1;
+}
+.div-login a {
+   display: inline-block;
+   position: relative;
+   left: -120px;
+   text-decoration: none;
+   transition: 0.5s;
+}
+.div-login a:hover{
+    transform: translateX(-10px);
+}
