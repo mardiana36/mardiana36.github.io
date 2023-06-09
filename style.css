@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    scroll-behavior: smooth;
 }
 
 .container-nav {
@@ -21,7 +22,6 @@
     color: #5AB885;
     padding: 10px;
     font-size: 40px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: bold;
     text-shadow: 0 4px 4px #0000004a;
 }
@@ -207,3 +207,147 @@ div .text-login{
 .div-login a:hover{
     transform: translateX(-10px);
 }
+
+
+/* DASHBOARD */
+.nav-dashboard{
+    background-color: #5AB885;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+.nav-dashboard div{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+label {
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: x-large;
+    cursor: pointer;
+}
+label img{
+    max-width: 35px;
+}
+label:hover{
+transform: translateY(-10px);
+}
+#togel, #menu{
+    display: none;
+}
+.menu-drop{
+    max-width: 240px;
+    background-color: #5AB885;
+    position: fixed;
+    display: none;
+    left: 0;
+    top:80px;
+}
+.list{
+    list-style-type: none;
+}
+.list .aktive{
+    background-color: #54A77A;
+}
+.list li{
+    padding: 20px 0 20px 40px;
+    
+}
+
+.list li a{
+    text-decoration: none;
+    color: #FFFFFF;
+    font-weight: bold;
+    
+}
+#togel:checked ~ #menu{
+    display: inline-flex;
+    align-items: start;
+}
+
+#icon-menu{
+    display: inline-block;
+    position: relative;
+}
+#togel:checked ~ #icon-menu{
+    display: none;
+}
+#icon-drop{
+    display: none;
+}
+#togel:checked ~ #icon-drop{
+    display: inline-block;
+    position: relative;
+}
+.logo-dashboard a,.logout a{
+    color: #FFFFFF;
+    text-decoration: none;
+}
+.logout{
+    background-color: #E21F1F;
+    border-radius: 10px;
+    box-shadow: 0 5px 4px #0000004a;
+}
+.logout a{
+    font-weight: bold;
+    font-size: x-large;
+}
+/* dasboard-konten */
+.container-dashboard{
+    position: relative;
+    top:88px;
+    max-width: 100%;
+    background-color: #ECECEC;
+}
+
+.div-dashboard{
+    display: flex;
+    justify-content: space-around;
+    padding: 60px 40px 20px 40px;
+}
+.card-dashboard{
+    font-size: x-large;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    background-color: #FFFFFF;
+    width: 25%;
+    gap: 20px;
+}
+.underline{
+    width: 88%;
+    height: 5px;
+    background-color: #5AB885;
+    margin: auto;
+}
+.div-text{
+     padding: 80px ;
+     font-weight: bold;
+     font-size: x-large;
+}
+ .card-dashboard2{
+    display: flex;
+    text-align: center;
+    background-color: none;
+    justify-content: space-evenly;
+    padding: 10px 40px 40px;
+ }
+ .card-div{
+    background-color: #FFFFFF;
+    width: 20%;
+    max-height: 500px;
+    border-radius: 20px;
+    overflow: visible;
+ }
+ .card-div img{
+    width: 100%;
+    border-radius: 20px 20px 0px 0px;
+    aspect-ratio: 4/4;
+    object-fit: fill;
+ }
+ .card-div p{
+    word-wrap: break-word;
+    padding: 10px;
+ }
