@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dataAngota</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body  onload=" geserContain('togel', 'kosong')">
+    <nav class="nav-dashboard" id="nav-ds">
+        <div>
+            <div class="div-drop">
+                <input type="checkbox" checked name="togel" id="togel">
+                <label for="togel" id="icon-menu"><img src="aset/gambar/icons8-menu-78.png" alt=""></label>
+                <label for="togel" id="icon-drop"><img src="aset/gambar/icons8-downward-64.png" alt=""></label>
+                <label for="togel">MENU</label>
+                <div class="menu-drop" id="menu">
+                    <ul class="list">
+                        <li><a href="dashboard.html">Dashboard</a></li>
+                        <li class="aktive"><a href="dataAnggota.html">Data Anggota</a></li>
+                        <li><a href="">Data Buku</a></li>
+                        <li><a href="">PINJAMKAN & KEMBALIKAN</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="li-nav logo-dashboard" id="logo"><a href="">PERPUSTAKAAN</a></div>
+            <div class="logout"><a href="home.html">LOGOUT</a></div>
+        </div>
+    </nav>
+    <main  class="container-dashboard" id="kosong">
+        <div class="container-anggota">
+            <div class="div-tombol">
+                <a href="">Tambah Anggota</a>
+            </div>
+            <div class="div-carianggota">
+                <form action="" id="cari-agt">
+                    <input type="search" placeholder="Nama/Kode Angota...">
+                    <img onclick="submitForm('cari-agt')" src="aset/gambar/icons8-search-64.png" alt="">
+                </form>
+            </div>
+        </div>
+        <div class="div-table">
+            <table class="table">
+                <tr class="tr-head">
+                    <th>NO.</th>
+                    <th>Foto profil</th>
+                    <th>Nama</th>
+                    <th>Alamat</th>
+                    <th>Jenis Kelamin</th>
+                    <th>Email</th>
+                    <th>Kode Anggota</th>
+                    <th>Aksi</th>
+                </tr>
+                <tr class="tr-body">
+                   <td class="td-no">1</td> 
+                   <td>1</td> 
+                   <td>antonnio</td> 
+                   <td>jln menguitani jakarta utara</td> 
+                   <td>pria</td> 
+                   <td>antonnio224@gmail.com</td> 
+                   <td>2200201</td> 
+                   <td class="aksi">
+                    <a href="">Edit</a>
+                    <a href="">Hapus</a>
+                   </td> 
+                </tr>
+                <tr class="tr-body">
+                   <td class="td-no">2</td> 
+                   <td>2</td> 
+                   <td>antonnio</td> 
+                   <td>jln menguitani jakarta utara</td> 
+                   <td>pria</td> 
+                   <td>antonnio224@gmail.com</td> 
+                   <td>2200201</td> 
+                   <td class="aksi">
+                    <a href="">Edit</a>
+                    <a href="">Hapus</a>
+                   </td> 
+                </tr>
+        </table>
+        </div>
+    </main>
+</body>
+
+</html>

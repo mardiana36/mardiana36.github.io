@@ -32,3 +32,6 @@ function heightNav(navbarId, contentId) {
   navbarDropdown.style.height = totalContentHeight + 'px';
 }
 
+function submitForm(idElement) {
+  document.getElementById(idElement).submit();
+}

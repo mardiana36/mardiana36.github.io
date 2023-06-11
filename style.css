@@ -242,6 +242,7 @@ transform: translateY(-10px);
     background-color: #5AB885;
     position: fixed;
     display: none;
+    height: 1000px;
     left: 0;
     top:80px;
 }
@@ -289,10 +290,14 @@ transform: translateY(-10px);
     background-color: #E21F1F;
     border-radius: 10px;
     box-shadow: 0 5px 4px #0000004a;
+    transition: 0.5s;
 }
 .logout a{
     font-weight: bold;
     font-size: x-large;
+}
+.logout:hover{
+    scale: 1.1;
 }
 /* dasboard-konten */
 .container-dashboard{
@@ -300,6 +305,8 @@ transform: translateY(-10px);
     top:88px;
     max-width: 100%;
     background-color: #ECECEC;
+    min-height: 740px;
+    overflow: hidden;
 }
 
 .div-dashboard{
@@ -351,3 +358,97 @@ transform: translateY(-10px);
     word-wrap: break-word;
     padding: 10px;
  }
+
+ /* Data Angota */
+ .container-anggota{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 30px 5px;
+    flex-wrap: wrap;
+ }
+ .div-tombol{
+    padding-top: 20px;
+
+    
+ }
+ .container-anggota .div-tombol a{
+    text-decoration: none;
+    color: #FFFFFF;
+    background-color: #F39C12;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 5px 5px 0px #a5a5a5;
+    transition: ease-in-out 0.8s;
+ }
+ .container-anggota .div-tombol a:hover{
+    background-color: #00bfef;
+    
+ }
+ .div-carianggota{
+    width: 50%;
+ }
+ .div-carianggota input{
+    width: 80%;
+    height: 40px;
+    padding: 0 10px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 5px 5px 0px #a5a5a5;
+ }
+ .div-carianggota img{
+    display: inline-block;
+    width: 40px;
+    position: relative;
+    top: 15px;
+    left: -45px;
+    transition: 0.5s;
+ }
+ .div-carianggota img:hover{
+    scale: 1.3;
+ }
+ .div-table{
+    overflow-x: auto;
+    margin: 0 30px;
+    background-color: #FFFFFF;
+ }
+ table, th,td{
+    border: 2px solid #fffefe;
+    border-collapse: collapse;
+    padding: 20px;
+ }
+ .table{
+    width: 100%;
+    box-shadow: 0 5px 5px 0px #a5a5a5;
+ }
+ tr:nth-child(even){
+    background-color: #00bfef30;
+ }
+.tr-head,.td-no{
+    background-color: #00bfef;
+}
+.tr-body{
+    background-color: #ECECEC;
+}
+.tr-body:hover{
+    outline: 2px dashed black;
+    outline-offset: -10px;
+}
+
+.tr-body .aksi a{
+    text-decoration:none;
+    color: #FFFFFF;
+    background-color: #F39C12;
+    border-bottom: 5px solid #FFFFFF;
+    padding: 10px 20px;
+    line-height: 20px;
+    text-align: center;
+    display: block;
+    transition: ease-in-out 0.8s;
+    font-weight: bold;
+}
+.tr-body .aksi a:hover{
+    color: #F39C12;
+    background-color: #FFFFFF;
+    border-bottom: 5px solid #00bfef;
+    box-shadow: 0 5px 4px 0 #a5a5a5;
+}
