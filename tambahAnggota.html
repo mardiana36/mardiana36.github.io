@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Home</title>
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <nav class="container-nav">
+        <ul class="ul-nav">
+            <li id="logo" class="li-nav logo-anggota">PERPUSTAKAAN</li>
+            <button class="login-nav li-nav kembali"> <a href="dataAnggota.html">Kembali</a> </button>
+        </ul>
+    </nav>
+    <main class="container-tbh-agt">
+        <div class="div-tbh-agt">
+            <p class="p-tbh-agt">TAMBAH ANGGOTA</p>
+                <form class="form-tbh-agt" action="">
+                    <div class="div-intbh-agt">
+                        <label for="nama-anggota">Nama:</label>
+                        <input type="text" name="nama-anggota" id="nama-anggota">
+                        <label for="email-anggota">Email: </label>
+                        <input type="email" name="email-anggota" id="email-anggota">
+                        <label for="alamat-anggota">Alamat</label>
+                        <input type="text" name="alamat-anggota" id="alamat-anggota">
+                    </div>
+                    <div class="div-intbh-agt">
+                        <p>Jenis Kelamin:</p>
+                        <input class="input-gender-agt" type="radio" name="gender" id="pria">
+                        <label class="label-gender-agt" for="pria">Pria</label> <br>
+                        <input class="input-gender-agt" type="radio" name="gender" id="wanita">
+                        <label  class="label-gender-agt" for="wanita">Wanita</label>
+                        <label for="foto">Foto Profil:</label>
+                        <input type="file" id="foto">
+                    </div>
+                </form>
+                <input class="submit-tbh-agt" type="submit" value="TAMBAH" id="tambah-anggota">
+        </div>
+    </main>
+</body>
+</html>

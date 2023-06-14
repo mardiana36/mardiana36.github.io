@@ -104,6 +104,7 @@
     border-style: none;
     border-radius: 10px;
     box-shadow: 0 5px 4px #0000004a;
+    font-size: 16px;
 }
 
 #search:focus {
@@ -451,4 +452,79 @@ transform: translateY(-10px);
     background-color: #FFFFFF;
     border-bottom: 5px solid #00bfef;
     box-shadow: 0 5px 4px 0 #a5a5a5;
+}
+/* tambah anggota/buku, edit anggota/buku */
+ .kembali {
+    background-color: #F39C12 !important;
+    font-size: 20px !important;
+}
+.logo-anggota{
+    font-size: 30px !important;
+}
+.container-tbh-agt{
+    display: flex;
+    justify-content: center;
+    background: #5AB885 url("aset/gambar/orangbawabuku.png")no-repeat;
+    background-position: calc(50% - 590px) calc(65%);
+    background-size: 180px;
+    padding: 100px;
+    width: 100%;
+}
+.div-tbh-agt{
+    background:  #ECECEC url("aset/gambar/catjatuh.png")no-repeat;
+    background-position: top;
+    background-size:100%;
+    border-radius: 35px;
+    box-shadow:  0px 0px 20px 0px rgba(0, 0, 0, 0.36);
+}
+.p-tbh-agt{
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    color: #FFFFFF;
+    margin: 100px 50px;
+}
+.form-tbh-agt{
+    display: flex;
+    justify-content: space-around;
+    gap:200px;
+    margin-top: 200px;
+    padding-left: 50px;
+}
+.div-intbh-agt{
+    margin: 50px;
+}
+.div-intbh-agt label, .div-intbh-agt input{
+ display: block;
+}
+.div-intbh-agt label{
+    color: black;
+    font-size: 20px;
+}
+.div-intbh-agt input{
+    width: 400px;
+    height: 40px;
+    font-size: 16px;
+    padding: 10px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    border: 1px solid #5AB885;
+    box-shadow:  0px 2px 3px 0px rgba(0, 0, 1, 0.312);
+}
+.input-gender-agt, .label-gender-agt{
+    display: inline-block !important;
+}
+.div-intbh-agt .input-gender-agt{
+    width: 30px;
+    margin-bottom: none;
+    height: 25px;
+}
+.div-intbh-agt .label-gender-agt{
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.div-intbh-agt input[type = "file"]{
+    box-shadow: none;
+    border: none;
 }
