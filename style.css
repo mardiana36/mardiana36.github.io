@@ -465,7 +465,7 @@ transform: translateY(-10px);
     display: flex;
     justify-content: center;
     background: #5AB885 url("aset/gambar/orangbawabuku.png")no-repeat;
-    background-position: calc(50% - 590px) calc(65%);
+    background-position: calc(50% - 490px) calc(65%);
     background-size: 180px;
     padding: 100px;
     width: 100%;
@@ -475,24 +475,32 @@ transform: translateY(-10px);
     background-position: top;
     background-size:100%;
     border-radius: 35px;
-    box-shadow:  0px 0px 20px 0px rgba(0, 0, 0, 0.36);
+    box-shadow: inset  0px 0px 20px 0px #306247;
 }
 .p-tbh-agt{
     text-align: center;
     font-size: 28px;
     font-weight: bold;
     color: #FFFFFF;
-    margin: 100px 50px;
+    margin: 20px 0 10px;
 }
 .form-tbh-agt{
     display: flex;
-    justify-content: space-around;
-    gap:200px;
-    margin-top: 200px;
-    padding-left: 50px;
+    padding: 20px;
+    gap: 30px;
+    
 }
 .div-intbh-agt{
-    margin: 50px;
+   
+    box-shadow:  0px 0px 20px 0px inset rgba(0, 0, 0, 0.467);
+   backdrop-filter: blur(4px);
+   width: 50%;
+   padding: 30px;
+   border-radius: 20px ;
+}
+.div-intbh-agt p {
+    font-size: 20px;
+    font-weight: bold;
 }
 .div-intbh-agt label, .div-intbh-agt input{
  display: block;
@@ -501,8 +509,11 @@ transform: translateY(-10px);
     color: black;
     font-size: 20px;
 }
-.div-intbh-agt input{
-    width: 400px;
+.div-intbh-agt label:hover{
+    transform: none;
+}
+.div-intbh-agt input {
+    width: 90%;
     height: 40px;
     font-size: 16px;
     padding: 10px;
@@ -515,16 +526,38 @@ transform: translateY(-10px);
     display: inline-block !important;
 }
 .div-intbh-agt .input-gender-agt{
-    width: 30px;
-    margin-bottom: none;
-    height: 25px;
+    width: 20px;
+    margin-bottom: 0px;
+    box-shadow: none;
+    height: 20px;
 }
 .div-intbh-agt .label-gender-agt{
-    font-size: 16px;
-    font-weight: 600;
+    font-size: 20px;
+    font-weight: 400;
 }
 
 .div-intbh-agt input[type = "file"]{
     box-shadow: none;
     border: none;
+}
+.div-submit-agt{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+.submit-tbh-agt{
+    border: none;
+    background-color: #5AB885;
+    padding: 20px 30px;
+    font-size: 20px;
+    color: #FFFFFF;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow:  0px 0px 10px 0px inset rgba(6, 6, 6, 0.663);
+    transition: 0.5s;
+}
+.submit-tbh-agt:hover{
+    box-shadow:  0px 0px 5px 0px inset rgba(255, 255, 255, 0.663);
+    scale: 1.1;
 }

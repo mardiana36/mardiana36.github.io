@@ -35,3 +35,12 @@ function heightNav(navbarId, contentId) {
 function submitForm(idElement) {
   document.getElementById(idElement).submit();
 }
+
+function showImg() {
+  let img = document.getElementById("img-agt");
+  let input = document.getElementById("foto");
+  if (input.files[0]) {
+    img.src = URL.createObjectURL(input.files[0]);
+  }
+  
+}
