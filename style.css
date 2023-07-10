@@ -461,12 +461,16 @@ transform: translateY(-10px);
 .logo-anggota{
     font-size: 30px !important;
 }
+.background-tambahagt{
+    background: #5AB885 url("aset/gambar/tambahAgt.png")no-repeat;
+}
+.background-tambahbuku{
+    background: #5AB885 url("aset/gambar/orangbawabuku.png")no-repeat;
+}
 .container-tbh-agt{
     display: flex;
     justify-content: center;
-    background: #5AB885 url("aset/gambar/orangbawabuku.png")no-repeat;
-    background-position: calc(50% - 490px) calc(65%);
-    background-size: 180px;
+    background-position: calc(50% - 525px) calc(65%);
     padding: 100px;
     width: 100%;
 }
@@ -560,4 +564,77 @@ transform: translateY(-10px);
 .submit-tbh-agt:hover{
     box-shadow:  0px 0px 5px 0px inset rgba(255, 255, 255, 0.663);
     scale: 1.1;
+}
+
+
+/* pinjam dan kembalikan buku */
+.div-pmn-buku{
+    padding: 30px 0px 0 5%;
+    background: url("aset/gambar/rakBuku.png")no-repeat;
+    background-size: 400px;
+    background-position: calc(100% - 500px) calc(100%);
+}
+.div-pmn-buku label {
+    color: black;
+    display: block;
+    font-weight: 500;
+    padding-top: 20px;
+    font-size: 20px;
+}
+.div-pmn-buku label:hover {
+    transform: none;
+}
+.div-pmn-buku label,.div-pmn-buku input{
+    margin-left: 20px;
+}
+.div-pmn-buku input {
+    width: 400px;
+    height: 45px;
+    border-radius: 20px;
+    padding-left: 20px;
+    font-size: 16px;
+    border: 1px solid #5AB885;
+    box-shadow:  0px 4px 4px 0px #a5a5a5;
+}
+.div-pmn-buku input[name="tgl-pjm"], .div-pmn-buku input[name="tgl-pgl"]{
+    border-radius: 10px;
+    background: url("aset/gambar/Rectangle\ 131.png")no-repeat  ;
+    background-size: 35px;
+    background-position: calc(100% - 5px);
+    display: block;
+    background-color: #FFFFFF;
+}
+.div-pmn-buku h3 {
+    font-size: 30px;
+    text-shadow: 0 4px 4px #a5a5a5;
+}
+
+#peminjaman , #pengembalian{
+    margin-top: 30px;
+    width: 30px;
+    height: 25px;
+}
+
+.div-pmn-buku .label-pmn{
+    display: inline-block;
+    margin-left: 0px;
+}
+
+.div-pmn-buku input[name="simpan-pmn"]{
+    width: 140px;
+    height: unset;
+    position: relative;
+    right: -260px;
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: black;
+    color: #FFFFFF;
+    font-weight: bold;
+    cursor: pointer;
+    display: block;
+}
+.div-pmn-buku input[name="simpan-pmn"]:hover{
+scale: 1.1;
+transition: 0.5s;
 }

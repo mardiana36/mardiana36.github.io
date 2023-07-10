@@ -1,15 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>dataAngota</title>
+    <title>Data Buku</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
 </head>
-
 <body  onload=" geserContain('togel', 'kosong')">
     <nav class="nav-dashboard" id="nav-ds">
         <div>
@@ -21,8 +18,8 @@
                 <div class="menu-drop" id="menu">
                     <ul class="list">
                         <li><a href="dashboard.html">Dashboard</a></li>
-                        <li class="aktive"><a href="dataAnggota.html">Data Anggota</a></li>
-                        <li><a href="dataBuku.html">Data Buku</a></li>
+                        <li><a href="dataAnggota.html">Data Anggota</a></li>
+                        <li class="aktive"><a href="dataBuku.html">Data Buku</a></li>
                         <li><a href="pinjamDanKembalikan.html">PINJAMKAN & KEMBALIKAN</a></li>
                     </ul>
                 </div>
@@ -34,11 +31,11 @@
     <main  class="container-dashboard" id="kosong">
         <div class="container-anggota">
             <div class="div-tombol">
-                <a href="tambahAnggota.html">Tambah Anggota</a>
+                <a href="tambahBuku.html">Tambah Buku</a>
             </div>
             <div class="div-carianggota">
                 <form action="" id="cari-agt">
-                    <input type="search" placeholder="Nama/Kode Angota...">
+                    <input type="search" placeholder="Judul Buku/Kode Buku...">
                     <img onclick="submitForm('cari-agt')" src="aset/gambar/icons8-search-64.png" alt="">
                 </form>
             </div>
@@ -47,37 +44,37 @@
             <table class="table">
                 <tr class="tr-head">
                     <th>NO.</th>
-                    <th>Foto profil</th>
-                    <th>Nama</th>
-                    <th>Alamat</th>
-                    <th>Jenis Kelamin</th>
-                    <th>Email</th>
-                    <th>Kode Anggota</th>
+                    <th>Foto Buku</th>
+                    <th>Judul Buku</th>
+                    <th>Nama Pengarang</th>
+                    <th>Tahun Rilis</th>
+                    <th>Stok Buku</th>
+                    <th>Kode Buku</th>
                     <th>Aksi</th>
                 </tr>
                 <tr class="tr-body">
                    <td class="td-no">1</td> 
                    <td>1</td> 
-                   <td>antonnio</td> 
-                   <td>jln menguitani jakarta utara</td> 
-                   <td>pria</td> 
-                   <td>antonnio224@gmail.com</td> 
-                   <td>2200201</td> 
+                   <td>Langkah Menuju Sukses</td> 
+                   <td>Jokotingkir</td> 
+                   <td>2023</td> 
+                   <td>11</td> 
+                   <td>12301</td> 
                    <td class="aksi">
-                    <a href="editAnggota.html">Edit</a>
+                    <a href="editBuku.html">Edit</a>
                     <a href="">Hapus</a>
                    </td> 
                 </tr>
                 <tr class="tr-body">
                    <td class="td-no">2</td> 
                    <td>2</td> 
-                   <td>antonnio</td> 
-                   <td>jln menguitani jakarta utara</td> 
-                   <td>pria</td> 
-                   <td>antonnio224@gmail.com</td> 
-                   <td>2200201</td> 
+                   <td>Hidup Tak Seindak Fiksi</td> 
+                   <td>danang putar jaya</td> 
+                   <td>2016</td> 
+                   <td>2</td> 
+                   <td>12302</td> 
                    <td class="aksi">
-                    <a href="editAnggota.html">Edit</a>
+                    <a href="editBuku.html">Edit</a>
                     <a href="">Hapus</a>
                    </td> 
                 </tr>
@@ -85,5 +82,4 @@
         </div>
     </main>
 </body>
-
 </html>
