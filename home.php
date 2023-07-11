@@ -14,7 +14,7 @@
     <nav class="container-nav">
         <ul class="ul-nav">
             <li id="logo" class="li-nav">PERPUSTAKAAN</li>
-            <button class="login-nav li-nav"> <a href="login.html">LOGIN</a> </button>
+            <button class="login-nav li-nav"> <a href="login.php">LOGIN</a> </button>
         </ul>
     </nav>
     <div class="container-content">

@@ -28,7 +28,7 @@
                 </div>
             </div>
             <div class="li-nav logo-dashboard" id="logo"><a href="">PERPUSTAKAAN</a></div>
-            <div class="logout"><a href="home.html">LOGOUT</a></div>
+            <div class="logout"><a href="logout.php" onclick="return confirm('Apakah yakin anda ingin LOGOUT?')">LOGOUT</a></div>
         </div>
     </nav>
     <main class="container-dashboard" id="kosong">

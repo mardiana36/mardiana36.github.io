@@ -44,3 +44,12 @@ function showImg() {
   }
   
 }
+function showPassword(idElement) {
+  var checkbox = document.getElementById(idElement);
+  if (checkbox.type == "password") {
+      checkbox.type = "text";
+      
+  } else {
+      checkbox.type = "password";
+  }
+}
