@@ -64,7 +64,7 @@ $dataAnggota = query("SELECT * FROM anggota ORDER BY kode ASC")
                 <?php foreach ($dataAnggota as $da) : ?>
                     <tr class="tr-body">
                         <td class="td-no"><?= $no.'.';?></td>
-                        <td>1</td>
+                        <td><img width="100" src="aset/gambar/database/<?= $da["foto"]; ?>" alt=""></td>
                         <td><?= $da["nama"];?></td>
                         <td><?= $da["alamat"];?></td>
                         <?php $gender = "Pria";?>
@@ -76,7 +76,7 @@ $dataAnggota = query("SELECT * FROM anggota ORDER BY kode ASC")
                         <td><?= $da["formatKode"].$da["kode"] ?></td>
                         <td class="aksi">
                             <a href="editAnggota.php?kode=<?= $da['kode'];?>">Edit</a>
-                            <a href="hapus.php?kode=<?= $da['kode']; ?>">Hapus</a>
+                            <a href="hapus.php?kode=<?= $da['kode']; ?> <?php $_SESSION['database'] = "anggota"; ?>" onclick="return confirm('Apakah anda yakin ingin menghapus data\n dengan KODE ANGGOTA =[ <?= $da['formatKode'].$da['kode'] ?> ]?')">Hapus</a>
                         </td>
                     </tr>
                     <?php $no++ ?>

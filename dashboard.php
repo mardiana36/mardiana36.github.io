@@ -1,6 +1,7 @@
 <?php
 require 'functionphp.php';
 cekLogin();
+$totalAgt = total("anggota");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -41,7 +42,7 @@ cekLogin();
                 <div><img src="aset/gambar/Rectangle 49.png" alt=""></div>
                 <div>
                     <p>Anggota</p>
-                    <p>2</p>
+                    <p><?= $totalAgt; ?></p>
                 </div>
             </div>
             <div class="card-dashboard">
