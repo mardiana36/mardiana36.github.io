@@ -1,3 +1,7 @@
+<?php
+require 'functionphp.php';
+cekLogin();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,7 +18,7 @@
     <nav class="container-nav">
         <ul class="ul-nav">
             <li id="logo" class="li-nav logo-anggota">PERPUSTAKAAN</li>
-            <button class="login-nav li-nav kembali"> <a href="dataAnggota.html">Kembali</a> </button>
+            <button class="login-nav li-nav kembali"> <a href="dataAnggota.php">Kembali</a> </button>
         </ul>
     </nav>
     <main class="container-tbh-agt background-tambahagt">

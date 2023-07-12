@@ -1,3 +1,7 @@
+<?php
+require 'functionphp.php';
+cekLogin();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,12 +18,12 @@
     <nav class="container-nav">
         <ul class="ul-nav">
             <li id="logo" class="li-nav logo-anggota">PERPUSTAKAAN</li>
-            <button class="login-nav li-nav kembali"> <a href="dataBuku.html">Kembali</a> </button>
+            <button class="login-nav li-nav kembali"> <a href="dataBuku.php">Kembali</a> </button>
         </ul>
     </nav>
     <main class="container-tbh-agt background-tambahbuku">
         <div class="div-tbh-agt">
-            <p class="p-tbh-agt">TAMBAH BUKU</p>
+            <p class="p-tbh-agt">EDIT BUKU</p>
                 <form id="form-agt" class="form-tbh-agt" action="">
                     <div class="div-intbh-agt">
                         <label for="judul-buku">Judul Buku:</label>
@@ -38,7 +42,7 @@
                     </div>
                 </form>
                 <div class="div-submit-agt">
-                    <input  onclick="submitForm('form-agt')" class="submit-tbh-agt" type="submit" value="TAMBAH" id="tambah-anggota">
+                    <input  onclick="submitForm('form-agt')" class="submit-tbh-agt" type="submit" value="SIMPAN" id="tambah-anggota">
                 </div>
         </div>
     </main>

@@ -1,3 +1,7 @@
+<?php
+require 'functionphp.php';
+cekLogin();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,9 +25,9 @@
                 <div class="menu-drop" id="menu">
                     <ul class="list">
                         <li class="aktive"><a href="#">Dashboard</a></li>
-                        <li><a href="dataAnggota.html">Data Anggota</a></li>
-                        <li><a href="dataBuku.html">Data Buku</a></li>
-                        <li><a href="pinjamDanKembalikan.html">PINJAMKAN & KEMBALIKAN</a></li>
+                        <li><a href="dataAnggota.php">Data Anggota</a></li>
+                        <li><a href="dataBuku.php">Data Buku</a></li>
+                        <li><a href="pinjamDanKembalikan.php">PINJAMKAN & KEMBALIKAN</a></li>
                     </ul>
                 </div>
             </div>
