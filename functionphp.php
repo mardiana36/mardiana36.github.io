@@ -45,7 +45,7 @@ function upload(){
 
     if($ukuranFile > 2000000){
         echo "<script>
-        alert('ukuran maksimal gambar = 1MB');
+        alert('ukuran maksimal gambar = 2MB');
     </script>";
     return false;
     }
@@ -56,20 +56,22 @@ function upload(){
     move_uploaded_file($tmpFile, 'aset/gambar/database/'.$namaFileBaru);
     return $namaFileBaru;
 }
-function tambahAnggota($post){
+function tambahAnggota($post, $tableName,$data){
     global $connection;
     $gambar = upload();
     if(!$gambar){
         return false;
     }
-    $nama = htmlspecialchars( $post["nama-anggota"]);
-    $email = htmlspecialchars( $post["email-anggota"]);
-    $alamat = htmlspecialchars( $post["alamat-anggota"]);
-    $gender = $post["gender"];
+    $data1 = htmlspecialchars( $post[$data[0]]);
+    $data2 = htmlspecialchars( $post[$data[1]]);
+    $data3 = htmlspecialchars( $post[$data[2]]);
+    $data4 = htmlspecialchars( $post[$data[3]]);
+    $data5 = $data[4];
+   
     
-    $query = "INSERT INTO anggota
+    $query = "INSERT INTO $tableName
                 VALUES 
-            ('$gambar', '$nama', '$alamat', '$gender', '$email', '23070', '')";
+            ('$gambar', '$data1', '$data2', '$data3', '$data4', '$data5', '')";
     mysqli_query($connection, $query);
     //mengetahui kesalahan atau eror padassat tambah data
     $error = mysqli_affected_rows($connection);
@@ -98,5 +100,43 @@ if($result){
     exit;
 }
 return $jumlah;
+}
+
+function edit($post, $tableName, $data,$colTable){
+global $connection;
+$kode = $post["kode"];
+$gambarLama = $post["gambarLama"];
+if($_FILES["foto"]["error"]===4){
+    $gambar = $gambarLama;
+}else{
+    $gambar = upload();
+}
+if(!$gambar){
+    return false;
+}
+$data1 = htmlspecialchars($post[$data[0]]);
+$data2 = htmlspecialchars($post[$data[1]]);
+$data3 = htmlspecialchars($post[$data[2]]);
+$data4 = htmlspecialchars($post[$data[3]]);
+
+$query ="UPDATE $tableName SET
+         foto = '$gambar', 
+         $colTable[0] = '$data1',
+         $colTable[1] = '$data2',
+         $colTable[2] = '$data3',
+         $colTable[3] = '$data4'
+         WHERE kode = $kode";
+         mysqli_query($connection,$query);
+         $error = mysqli_affected_rows($connection);
+         return $error;
+}
+
+function cari($key,$tableName,$keySearch){
+    $query = "SELECT * FROM $tableName
+    WHERE 
+    $keySearch[0] LIKE '%$key%' OR
+    CONCAT($keySearch[1], $keySearch[2]) LIKE '%$key%'
+    ";
+    return query($query);
 }
 ?>

@@ -408,13 +408,20 @@ transform: translateY(-10px);
     border: none;
     box-shadow: 0 5px 5px 0px #a5a5a5;
  }
- .div-carianggota img{
+ .div-carianggota button{
     display: inline-block;
     width: 40px;
     position: relative;
     top: 15px;
     left: -45px;
     transition: 0.5s;
+    box-shadow: none;
+    background-color: transparent;
+    border: unset;
+ }
+ .div-carianggota img{
+   width: inherit;
+   cursor: pointer;
  }
  .div-carianggota img:hover{
     scale: 1.3;

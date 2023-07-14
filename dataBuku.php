@@ -38,9 +38,9 @@ cekLogin();
                 <a href="tambahBuku.php">Tambah Buku</a>
             </div>
             <div class="div-carianggota">
-                <form action="" id="cari-agt">
-                    <input type="search" placeholder="Judul Buku/Kode Buku...">
-                    <img onclick="submitForm('cari-agt')" src="aset/gambar/icons8-search-64.png" alt="">
+            <form action="" method="post" id="cari-agt">
+                    <input type="search" name="key" placeholder="Nama/Kode Angota...">
+                    <button type=""  name="cari" alt="" id="cari"> <img src="aset/gambar/icons8-search-64.png" alt="Search" ></button>
                 </form>
             </div>
         </div>

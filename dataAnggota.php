@@ -1,7 +1,12 @@
 <?php
 require 'functionphp.php';
 cekLogin();
-$dataAnggota = query("SELECT * FROM anggota ORDER BY kode ASC")
+$tableName ="anggota";
+$keySearch = ['nama','formatKode','kode'];
+$dataAnggota = query("SELECT * FROM $tableName");
+if(isset($_POST["cari"])){
+ $dataAnggota =  cari($_POST["key"], $tableName, $keySearch);
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -42,9 +47,9 @@ $dataAnggota = query("SELECT * FROM anggota ORDER BY kode ASC")
                 <a href="tambahAnggota.php">Tambah Anggota</a>
             </div>
             <div class="div-carianggota">
-                <form action="" id="cari-agt">
-                    <input type="search" placeholder="Nama/Kode Angota...">
-                    <img onclick="submitForm('cari-agt')" src="aset/gambar/icons8-search-64.png" alt="">
+                <form action="" method="post" id="cari-agt">
+                    <input type="search" name="key" placeholder="Nama/Kode Angota...">
+                    <button type=""  name="cari" alt="" id="cari"> <img src="aset/gambar/icons8-search-64.png" alt="Search" ></button>
                 </form>
             </div>
         </div>

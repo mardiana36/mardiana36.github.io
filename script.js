@@ -32,10 +32,6 @@ function heightNav(navbarId, contentId) {
   navbarDropdown.style.height = totalContentHeight + 'px';
 }
 
-function submitForm(idElement) {
-  document.getElementById(idElement).submit();
-}
-
 function showImg() {
   let img = document.getElementById("img-agt");
   let input = document.getElementById("foto");
@@ -53,3 +49,4 @@ function showPassword(idElement) {
       checkbox.type = "password";
   }
 }
+

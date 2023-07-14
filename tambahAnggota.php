@@ -2,7 +2,9 @@
 require 'functionphp.php';
 cekLogin();
 if(isset($_POST["tambah"])){
-    if(tambahAnggota($_POST) > 0 ){
+    $tableName = "anggota";
+    $data = ['nama-anggota', 'alamat-anggota', 'gender','email-anggota','23070'];
+    if(tambahAnggota($_POST, $tableName, $data) > 0 ){
         $query = "SELECT formatKode, kode FROM anggota ORDER BY kode DESC LIMIT 1";
         $result = mysqli_query($connection, $query);
         if($result){
@@ -54,21 +56,21 @@ if(isset($_POST["tambah"])){
                 <form id="form-agt" class="form-tbh-agt" action="" method="post" enctype="multipart/form-data">
                     <div class="div-intbh-agt">
                         <label for="nama-anggota">Nama:</label>
-                        <input type="text" name="nama-anggota" id="nama-anggota" required >
+                        <input type="text" name="nama-anggota" value="<?= isset($_POST['nama-anggota']) ? $_POST['nama-anggota'] : ''; ?>" id="nama-anggota" required >
                         <label for="email-anggota">Email: </label>
-                        <input type="email" name="email-anggota" id="email-anggota" required>
+                        <input type="email" name="email-anggota" value="<?= isset($_POST['email-anggota']) ? $_POST['email-anggota'] : ''; ?>"  id="email-anggota" required>
                         <label for="alamat-anggota">Alamat:</label>
-                        <input type="text" name="alamat-anggota" id="alamat-anggota" required>
+                        <input type="text" name="alamat-anggota" value="<?= isset($_POST['alamat-anggota']) ? $_POST['alamat-anggota'] : ''; ?>"  id="alamat-anggota" required>
                         <p>Jenis Kelamin:</p>
-                        <input class="input-gender-agt" type="radio" name="gender" value="1" id="pria" required>
+                        <input class="input-gender-agt" type="radio" name="gender" value="1" <?= (isset($_POST['gender']) && $_POST['gender'] === '1') ? 'checked' : ''; ?> id="pria" required>
                         <label class="label-gender-agt" for="pria">Pria</label> <br>
-                        <input class="input-gender-agt" type="radio" name="gender" value="0" id="wanita" required>
+                        <input class="input-gender-agt" type="radio" name="gender" value="0" <?= (isset($_POST['gender']) && $_POST['gender'] === '0') ? 'checked' : ''; ?> id="wanita" required>
                         <label  class="label-gender-agt" for="wanita">Wanita</label>
                     </div>
                     <div class="div-intbh-agt">
                         <label for="foto">Foto Profil:</label>
                         <img id="img-agt" src="aset/gambar/daily-user-icon-2.png" height="256px" alt="">
-                        <input onchange="showImg()" type="file" name="foto" id="foto" required>
+                        <input onchange="showImg()" type="file" name="foto" id="foto" accept=".jpg, .jpeg, .png" required>
                     </div>
                 </form>
                 <div class="div-submit-agt">
