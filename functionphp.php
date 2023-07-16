@@ -22,6 +22,7 @@ function query($query){
     }
     return $tampung;
 }
+
 function upload(){
     $namaFile = $_FILES["foto"]["name"];
     $ukuranFile = $_FILES["foto"]["size"];
@@ -138,5 +139,16 @@ function cari($key,$tableName,$keySearch){
     CONCAT($keySearch[1], $keySearch[2]) LIKE '%$key%'
     ";
     return query($query);
+}
+function maxData($nameTable, $maxData){
+    $tampung = array();
+    $jumlahData = total("anggota");
+    $jumlahHalaman = ceil( $jumlahData / $maxData);
+    $halamanAktif = isset($_GET["p"]) ? $_GET["p"] : 1;
+    $awalData = ($maxData * $halamanAktif) - $maxData;
+    $data = query("SELECT * FROM $nameTable LIMIT $awalData, $maxData");
+    $tampung['data'] = $data;
+    $tampung['jumlahHalaman'] = $jumlahHalaman;
+    return $tampung;
 }
 ?>

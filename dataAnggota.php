@@ -3,7 +3,9 @@ require 'functionphp.php';
 cekLogin();
 $tableName ="anggota";
 $keySearch = ['nama','formatKode','kode'];
-$dataAnggota = query("SELECT * FROM $tableName");
+$data = maxData($tableName, 5);
+$jumlahHalaman = $data['jumlahHalaman'];
+$dataAnggota = $data['data'];
 if(isset($_POST["cari"])){
  $dataAnggota =  cari($_POST["key"], $tableName, $keySearch);
 }
@@ -80,13 +82,16 @@ if(isset($_POST["cari"])){
                         <td><?= $da["email"]?></td></td>
                         <td><?= $da["formatKode"].$da["kode"] ?></td>
                         <td class="aksi">
-                            <a href="editAnggota.php?kode=<?= $da['kode'];?>">Edit</a>
-                            <a href="hapus.php?kode=<?= $da['kode']; ?> <?php $_SESSION['database'] = "anggota"; ?>" onclick="return confirm('Apakah anda yakin ingin menghapus data\n dengan KODE ANGGOTA =[ <?= $da['formatKode'].$da['kode'] ?> ]?')">Hapus</a>
+                            <a href="editAnggota.php?kode=<?= $da['kode'];?>"><img src="aset/gambar/edit.png" alt=""></a>
+                            <a id="hapus" href="hapus.php?kode=<?= $da['kode']; ?> <?php $_SESSION['database'] = "anggota"; ?>" onclick="return confirm('Apakah anda yakin ingin menghapus data\n dengan KODE ANGGOTA =[ <?= $da['formatKode'].$da['kode'] ?> ]?')"><img src="aset/gambar/hapus.png" alt=""></a>
                         </td>
                     </tr>
                     <?php $no++ ?>
                 <?php endforeach; ?>
             </table>
+            <?php for($i = 1; $i <= $jumlahHalaman; $i++): ?>
+                    <a href="?p=<?= $i; ?>"><?= $i; ?></a>
+                    <?php endfor;?>
         </div>
     </main>
 </body>

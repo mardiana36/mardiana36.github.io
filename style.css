@@ -335,6 +335,12 @@ transform: translateY(-10px);
     background-color: #FFFFFF;
     width: 25%;
     gap: 20px;
+    max-height: 103px;
+   
+}
+.card-dashboard div img{
+    position: relative;
+    top: 3px;
 }
 .underline{
     width: 88%;
@@ -394,7 +400,7 @@ transform: translateY(-10px);
     transition: ease-in-out 0.8s;
  }
  .container-anggota .div-tombol a:hover{
-    background-color: #00bfef;
+    background-color: #306247;
     
  }
  .div-carianggota{
@@ -402,7 +408,7 @@ transform: translateY(-10px);
  }
  .div-carianggota input{
     width: 80%;
-    height: 40px;
+    height: 50px;
     padding: 0 10px;
     border-radius: 10px;
     border: none;
@@ -413,7 +419,7 @@ transform: translateY(-10px);
     width: 40px;
     position: relative;
     top: 15px;
-    left: -45px;
+    left: -50px;
     transition: 0.5s;
     box-shadow: none;
     background-color: transparent;
@@ -440,11 +446,11 @@ transform: translateY(-10px);
     width: 100%;
     box-shadow: 0 5px 5px 0px #a5a5a5;
  }
- tr:nth-child(even){
-    background-color: #00bfef30;
+ tr:nth-child(odd){
+    background-color: #70ad473d;
  }
-.tr-head,.td-no{
-    background-color: #00bfef;
+.tr-head{
+    background-color: #5AB885 !important;
 }
 .tr-body{
     background-color: #ECECEC;
@@ -457,7 +463,7 @@ transform: translateY(-10px);
 .tr-body .aksi a{
     text-decoration:none;
     color: #FFFFFF;
-    background-color: #F39C12;
+    background-color:#5AB885;
     border-bottom: 5px solid #FFFFFF;
     padding: 10px 20px;
     line-height: 20px;
@@ -466,11 +472,16 @@ transform: translateY(-10px);
     transition: ease-in-out 0.8s;
     font-weight: bold;
 }
+.tr-body .aksi a[id="hapus"]{
+    background-color: #E21F1F;
+}
 .tr-body .aksi a:hover{
     color: #F39C12;
-    background-color: #FFFFFF;
-    border-bottom: 5px solid #00bfef;
-    box-shadow: 0 5px 4px 0 #a5a5a5;
+    background-color: #448c65;
+}
+.tr-body .aksi a:hover[id="hapus"]{
+    color: #F39C12;
+    background-color: #b41818;
 }
 /* tambah anggota/buku, edit anggota/buku */
  .kembali {
@@ -657,3 +668,15 @@ transform: translateY(-10px);
 scale: 1.1;
 transition: 0.5s;
 }
+
+/* footer */
+.footer-home {
+    box-sizing: border-box;
+    background-color: #ffffff;
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+  }
