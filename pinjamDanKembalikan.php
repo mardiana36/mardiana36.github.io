@@ -1,6 +1,7 @@
 <?php
 require 'functionphp.php';
 cekLogin();
+$activePage = 'pinjamKembalikan';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -14,7 +15,7 @@ cekLogin();
 </head>
 
 <body  onload=" geserContain('togel', 'kosong')">
-<?php include 'menu.php' ?>
+<?php include 'menu.php'; ?>
     <main class="container-dashboard" id="kosong">
         <div class="div-pmn-buku">
             <form action="">
@@ -73,6 +74,7 @@ cekLogin();
         </table>
         </div>
     </main>
+    <?php include 'footer.php'; ?>
 </body>
 
 </html>

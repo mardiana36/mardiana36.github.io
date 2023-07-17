@@ -78,5 +78,6 @@ if(isset($_POST["tambah"])){
                 </div>
         </div>
     </main>
+    <?php include 'footer.php'; ?>
 </body>
 </html>

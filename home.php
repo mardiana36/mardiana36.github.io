@@ -28,7 +28,7 @@
                     <form action="" id = "cari-buku">
                         <input type="search" name="search" id="search" placeholder="Judul Buku...">
                     </form>
-                    <p>Buku adalah gerbang dunia dan membaca adalah kuncinya</p>
+                    <p>Buku Adalah Gerbang Dunia Dan Membaca Adalah Kuncinya</p>
                 </div>
                 <div class="gambar-samping">
                     <img src="aset/gambar/tumpukan-buku.png" alt="">
@@ -44,11 +44,7 @@
             </div>
         </div>
     </div>
-    <div class="footer">
-    <footer class="footer-home">
-        <p>Copyright PGR06</p>
-    </footer>
-</div>
+    <?php include 'footer.php'; ?>
 </body>
 
 </html>

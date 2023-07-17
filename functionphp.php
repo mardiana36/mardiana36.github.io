@@ -149,6 +149,7 @@ function maxData($nameTable, $maxData){
     $data = query("SELECT * FROM $nameTable LIMIT $awalData, $maxData");
     $tampung['data'] = $data;
     $tampung['jumlahHalaman'] = $jumlahHalaman;
+    $tampung['halamanAktif'] = $halamanAktif;
     return $tampung;
 }
 ?>

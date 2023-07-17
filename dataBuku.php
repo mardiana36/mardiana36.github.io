@@ -1,7 +1,7 @@
 <?php
 require 'functionphp.php';
 cekLogin();
-
+$activePage = 'dataBuku';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,7 +13,7 @@ cekLogin();
     <script src="script.js"></script>
 </head>
 <body  onload=" geserContain('togel', 'kosong')">
-<?php include 'menu.php' ?>
+<?php include 'menu.php';?>
     <main  class="container-dashboard" id="kosong">
         <div class="container-anggota">
             <div class="div-tombol">
@@ -67,5 +67,6 @@ cekLogin();
         </table>
         </div>
     </main>
+    <?php include 'footer.php'; ?>
 </body>
 </html>

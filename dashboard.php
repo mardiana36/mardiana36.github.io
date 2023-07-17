@@ -2,6 +2,7 @@
 require 'functionphp.php';
 cekLogin();
 $totalAgt = total("anggota");
+$activePage = 'dashboard';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -16,7 +17,8 @@ $totalAgt = total("anggota");
 </head>
 
 <body id="1" onload="geserContain('togel', 'kosong')">
-   <?php include 'menu.php' ?>
+   <?php include 'menu.php'; 
+   ?>
     <main class="container-dashboard" id="kosong">
         <div class="div-dashboard">
             <div class="card-dashboard">
@@ -91,6 +93,7 @@ $totalAgt = total("anggota");
            
         </div>
     </main>
+    <?php include 'footer.php'; ?>
 </body>
 
 </html>
