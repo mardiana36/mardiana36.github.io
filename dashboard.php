@@ -15,27 +15,8 @@ $totalAgt = total("anggota");
     <script src="script.js"></script>
 </head>
 
-<body onload="geserContain('togel', 'kosong')">
-    <nav class="nav-dashboard" id="nav-ds">
-        <div>
-            <div class="div-drop">
-                <input type="checkbox" checked name="togel" id="togel">
-                <label for="togel" id="icon-menu"><img src="aset/gambar/icons8-menu-78.png" alt=""></label>
-                <label for="togel" id="icon-drop"><img src="aset/gambar/icons8-downward-64.png" alt=""></label>
-                <label for="togel">MENU</label>
-                <div class="menu-drop" id="menu">
-                    <ul class="list">
-                        <li class="aktive"><a href="#">Dashboard</a></li>
-                        <li><a href="dataAnggota.php">Data Anggota</a></li>
-                        <li><a href="dataBuku.php">Data Buku</a></li>
-                        <li><a href="pinjamDanKembalikan.php">PINJAMKAN & KEMBALIKAN</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="li-nav logo-dashboard" id="logo"><a href="">PERPUSTAKAAN</a></div>
-            <div class="logout"><a href="logout.php" onclick="return confirm('Apakah yakin anda ingin LOGOUT?')">LOGOUT</a></div>
-        </div>
-    </nav>
+<body id="1" onload="geserContain('togel', 'kosong')">
+   <?php include 'menu.php' ?>
     <main class="container-dashboard" id="kosong">
         <div class="div-dashboard">
             <div class="card-dashboard">
@@ -68,21 +49,46 @@ $totalAgt = total("anggota");
         </div>
         <div class="card-dashboard2">
             <div class="card-div">
-                <img src="aset/gambar/buku.jpg" alt="">
-                <p>TEXT</p>
+                <div class="caver-div">
+                    <div class="front-caver">
+                        <img src="aset/gambar/buku.jpg" alt="">
+                    </div>
+                    <div class="back-caver">
+                        <p>TEXT</p>
+                    </div>
+                </div>
             </div>
             <div class="card-div">
-                <img src="aset/gambar/buku.jpg" alt="">
-                <p>TEXT</p>
+                <div class="caver-div">
+                    <div class="front-caver">
+                        <img src="aset/gambar/buku.jpg" alt="">
+                    </div>
+                    <div class="back-caver">
+                        <p>TEXT</p>
+                    </div>
+                </div>
             </div>
             <div class="card-div">
-                <img src="aset/gambar/buku.jpg" alt="">
-                <p>TEXT</p>
+                <div class="caver-div">
+                    <div class="front-caver">
+                        <img src="aset/gambar/buku.jpg" alt="">
+                    </div>
+                    <div class="back-caver">
+                        <p>TEXT</p>
+                    </div>
+                </div>
             </div>
             <div class="card-div">
-                <img src="aset/gambar/buku.jpg" alt="">
-                <p>111111111111111111111111111111111111111</p>
+                <div class="caver-div">
+                    <div class="front-caver">
+                        <img src="aset/gambar/buku.jpg" alt="">
+                    </div>
+                    <div class="back-caver">
+                        <p>TEXT</p>
+                    </div>
+                </div>
             </div>
+           
         </div>
     </main>
 </body>

@@ -49,4 +49,14 @@ function showPassword(idElement) {
       checkbox.type = "password";
   }
 }
+function setActiveLink(link) {
+  const menuLinks = document.querySelectorAll('.list li');
+  
+  menuLinks.forEach(menuLink => {
+    menuLink.classList.remove('aktive');
+  });
+  link.classList.add('aktive');
+}
+
+
 
