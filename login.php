@@ -32,7 +32,6 @@ if (isset($_SESSION['email'])) {
                 <input type="text" id="email-login" name="email-login" placeholder="Email">
                 <input type="password" id="password-login" name="password-login" placeholder="Password">
                 <input type="checkbox" onclick="showPassword('password-login')" name="showPw" id="showPw">
-                <a href="home.php"> &#60&#60--Kembali</a>
                 <input type="submit" value="Masuk" name="masuk" id="masuk">
             </form>
 

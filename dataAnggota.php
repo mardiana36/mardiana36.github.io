@@ -50,7 +50,7 @@ $activePage = 'dataAnggota';
                     <th>Kode Anggota</th>
                     <th>Aksi</th>
                 </tr>
-                <?php $no = 1; ?>
+                <?php $no = 1;?>
                 <?php foreach ($dataAnggota as $da) : ?>
                     <tr class="tr-body">
                         <td class="td-no"><?= $no . '.'; ?></td>
@@ -75,14 +75,14 @@ $activePage = 'dataAnggota';
             </table>
         </div>
         <div class="div-nextpage">
-        <?php for ($i = 1; $i <= $jumlahHalaman; $i++) : ?>
-            <?php if($i == $halamanAktif) : ?>
-                <div><a class="next-page colordarkGreen" href="?p=<?= $i; ?>"><?= $i; ?></a></div>
-                <?php else :?>
-                <div><a class="next-page colorGreen" href="?p=<?= $i; ?>"><?= $i; ?></a></div>
-            <?php endif; ?>
-            
-        <?php endfor; ?>
+            <?php for ($i = 1; $i <= $jumlahHalaman; $i++) : ?>
+                <?php if ($i == $halamanAktif) : ?>
+                    <div><a class="next-page colordarkGreen" href="?p=<?= $i ?>"><?= $i; ?></a></div>
+                <?php else : ?>
+                    <div><a class="next-page colorGreen" href="?p=<?= $i ?>"><?= $i; ?></a></div>
+                <?php endif; ?>
+
+            <?php endfor; ?>
         </div>
     </main>
     <?php include 'footer.php'; ?>
