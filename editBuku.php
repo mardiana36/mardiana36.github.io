@@ -69,7 +69,7 @@ if (isset($_POST['submit'])) {
                 </div>
                 <div class="div-intbh-agt">
                     <label for="foto">Foto Buku:</label>
-                    <img id="img-agt" src="aset/gambar/database/<?= $row["foto"]; ?>" height="256px" alt="">
+                    <img id="img-agt" src="aset/gambar/database/<?= $row["foto"]; ?>"  alt="">
                         <input onchange="showImg()" type="file" name="foto" id="foto" accept=".jpg, .jpeg, .png">
                 </div>
             </form>

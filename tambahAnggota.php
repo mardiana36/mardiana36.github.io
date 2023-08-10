@@ -69,7 +69,7 @@ if(isset($_POST["tambah"])){
                     </div>
                     <div class="div-intbh-agt">
                         <label for="foto">Foto Profil:</label>
-                        <img id="img-agt" src="aset/gambar/daily-user-icon-2.png" height="256px" alt="">
+                        <img id="img-agt" src="aset/gambar/daily-user-icon-2.png" alt="">
                         <input onchange="showImg()" type="file" name="foto" id="foto" accept=".jpg, .jpeg, .png" required>
                     </div>
                 </form>

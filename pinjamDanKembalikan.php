@@ -94,9 +94,8 @@ if (isset($_POST["simpan"])) {
 
             </form>
         </div>
-        <div class="container-anggota">
-            <div class="div-tombol">
-            </div>
+        <div class="div-pjm">
+            <div class="div-tombol"></div>
             <div class="div-carianggota">
                 <form action="" method="post" id="cari-agt">
                     <input type="search" name="key" value="<?= $key; ?>" placeholder="Nama/judul...">

@@ -7,10 +7,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
 
-.container-nav {}
-
-
-
 
 .ul-nav {
     display: flex;
@@ -49,10 +45,15 @@
     scale: 1.1;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 .container-content {
     display: flex;
     justify-content: center;
     background-image: linear-gradient(#5AB885, #ECECEC);
+    width: 100vw;
 }
 
 .content-home-1 {
@@ -61,7 +62,7 @@
 }
 
 .gambar-samping img {
-    width: 350px;
+    width: 16vw;
 }
 
 .content-dlm {
@@ -69,22 +70,22 @@
 }
 
 .content-dlm p {
-    font-size: 48px;
-    max-width: 15em;
-    font-weight: 550;
+    font-size: 3.5vw;
+    max-width: 14em;
+    font-weight: 500;
     color: #FFFFFF;
     text-shadow: 0 4px 4px #0000004a;
 }
 
 .content-dlm img {
     position: relative;
-    width: 500px;
-    top: 3em;
+    width: 30vw;
+    top: 4vw;
 }
 
 .content-dlm input {
-    width: 100%;
-    padding: 20px;
+    width: 50vw;
+    padding: 15px;
     border-style: none;
     border-radius: 10px;
     box-shadow: 0 5px 4px #0000004a;
@@ -97,7 +98,7 @@
 }
 
 .content-dlm input::-webkit-input-placeholder {
-    font-size: 18px;
+    font-size: 16px;
     color: #a5a5a5;
 }
 
@@ -105,10 +106,10 @@
     display: flex;
     gap: 40px;
     flex-direction: row;
-    margin: 80px 0 40px 0;
+    margin: 2vw 0 2vw 0;
     overflow-x: auto;
     padding: 20px;
-    width: 100%;
+    max-width: 100%;
 
 }
 
@@ -128,9 +129,7 @@
     outline-offset: 10px;
 }
 
-.content-home-2 div img {
-    width: inherit;
-}
+
 
 .flip-card {
     position: relative;
@@ -140,6 +139,7 @@
     cursor: pointer;
     overflow: hidden;
 }
+
 
 .flip-card-inner {
     position: absolute;
@@ -199,7 +199,7 @@
 .container-login {
     display: flex;
     background-color: #5ab88451;
-    height: 860px;
+    height: 100vh;
     gap: 50px;
     flex-direction: column;
     align-items: center;
@@ -219,7 +219,7 @@ div .text-login {
     border-radius: 20px;
     padding: 50px;
     background-color: #FFFFFF;
-    width: auto;
+    width: 450px;
     height: 400px;
     box-shadow: 0 5px 4px #0000004a;
 }
@@ -231,7 +231,7 @@ div .text-login {
 
 .div-login form input {
     display: block;
-    width: 500px;
+    width: 350px;
     padding: 12px;
     margin-bottom: 30px;
     border-radius: 10px;
@@ -249,7 +249,7 @@ div .text-login {
     width: 140px;
     margin-bottom: 0;
     margin-top: 20px;
-    right: -120px;
+    right: -100px;
     border: none;
     background-color: #5AB885;
     color: #FFFFFF;
@@ -302,6 +302,7 @@ div .text-login {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
+
 }
 
 label {
@@ -311,12 +312,9 @@ label {
     cursor: pointer;
 }
 
-label img {
-    max-width: 35px;
-}
 
-label:hover {
-    transform: translateY(-10px);
+label img {
+    max-width: 20px;
 }
 
 #togel, #menu {
@@ -324,17 +322,19 @@ label:hover {
 }
 
 .menu-drop {
-    max-width: 240px;
+    max-width: 160px;
     background-color: #5AB885;
     position: fixed;
     display: none;
-    height: 1000px;
+    height: 100vh;
     left: 0;
-    top: 80px;
+    top: 50px;
+    padding-top: 40px !important;
 }
 
 .list {
     list-style-type: none;
+    font-size: 18px;
 }
 
 .active {
@@ -342,7 +342,7 @@ label:hover {
 }
 
 .list li {
-    padding: 20px 0 20px 40px;
+    padding: 10px 0 20px 10px;
 
 }
 
@@ -376,6 +376,10 @@ label:hover {
     position: relative;
 }
 
+#logo {
+    font-size: 35px;
+}
+
 .logo-dashboard a, .logout a {
     color: #FFFFFF;
     text-decoration: none;
@@ -404,7 +408,7 @@ label:hover {
 /* dasboard-konten */
 .container-dashboard {
     position: relative;
-    top: 88px;
+    top: 70px;
     max-width: 100%;
     background-color: #ECECEC;
     min-height: 100vh;
@@ -417,7 +421,7 @@ label:hover {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    padding: 5vh;
+    padding: 2vw;
 }
 
 .card-dashboard {
@@ -552,14 +556,13 @@ label:hover {
 .div-tombol {
     padding-top: 20px;
 
-
 }
 
 .container-anggota .div-tombol a {
     text-decoration: none;
     color: #FFFFFF;
     background-color: #F39C12;
-    padding: 10px 20px;
+    padding: 1vw 2vw;
     border-radius: 5px;
     box-shadow: 0 5px 5px 0px #a5a5a5;
     transition: ease-in-out 0.8s;
@@ -571,7 +574,7 @@ label:hover {
 }
 
 .div-carianggota {
-    width: 50%;
+    width: 60vw;
 }
 
 .div-carianggota input {
@@ -594,6 +597,7 @@ label:hover {
     background-color: transparent;
     border: unset;
 }
+
 
 .div-carianggota img {
     width: inherit;
@@ -729,7 +733,7 @@ tr:nth-child(odd) {
 .container-tbh-agt {
     display: flex;
     justify-content: center;
-    background-position: calc(50% - 525px) calc(65%);
+    background-position: calc(50% - 30vw) calc(65%);
     padding: 100px;
     width: 100%;
 }
@@ -751,21 +755,34 @@ tr:nth-child(odd) {
 }
 
 .form-tbh-agt {
+    width: 45vw;
     display: flex;
     padding: 20px;
     gap: 30px;
-
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .div-intbh-agt {
-
     box-shadow: 0px 0px 20px 0px inset rgba(0, 0, 0, 0.467);
     backdrop-filter: blur(4px);
-    width: 50%;
+    width: 47.5%;
     padding: 30px;
     border-radius: 20px;
 }
+#img-agt{
+    width : 200px !important;
+}
 
+@media screen and (max-width: 1440px) {
+    /* Aturan gaya untuk layar dengan lebar kurang dari 600px */
+    .div-intbh-agt {
+        width: 100%;
+    }
+    .container-tbh-agt {
+        background-position: calc(50% - 34vw) calc(65%);
+    }
+  }
 .div-intbh-agt p {
     font-size: 20px;
     font-weight: bold;
@@ -875,6 +892,7 @@ tr:nth-child(odd) {
     box-shadow: 0px 4px 4px 0px #a5a5a5;
 }
 
+
 .div-pmn-buku select {
     margin-left: 20px;
     width: 400px;
@@ -901,8 +919,9 @@ tr:nth-child(odd) {
 
 #peminjaman, #pengembalian {
     margin-top: 30px;
-    width: 30px;
-    height: 25px;
+    width: 20px;
+    height: 20px;
+    box-shadow: none;
 }
 
 .div-pmn-buku .label-pmn {
@@ -914,7 +933,7 @@ tr:nth-child(odd) {
     width: 140px;
     height: unset;
     position: relative;
-    right: -260px;
+    right: -15vw;
     margin-top: 30px;
     padding: 20px;
     border-radius: 10px;
@@ -930,6 +949,11 @@ tr:nth-child(odd) {
     transition: 0.5s;
 }
 
+.div-pjm {
+    padding: 30px 30px 5px;
+    margin-left: 20vw;
+}
+
 /* footer */
 .footer-home {
     box-sizing: border-box;
@@ -937,8 +961,70 @@ tr:nth-child(odd) {
     position: relative;
     left: 0;
     bottom: 0;
-    width: 100%;
+    width: 100vw;
     padding: 10px;
     text-align: center;
 
+}
+
+@media screen and (max-width: 700px) {
+    #logo {
+        font-size: 20px;
+    }
+
+    .logout img {
+        width: 30px;
+    }
+
+    .div-pmn-buku input, .div-pmn-buku select {
+        width: 60vw;
+    }
+
+    .div-pjm {
+        padding: 30px 30px 5px;
+        margin-left: unset;
+    }
+
+    .nav-dashboard div {
+        padding: 10px 5px;
+
+    }
+    .background-tambahagt {
+        background: #5AB885 ;
+    }
+    
+    .background-tambahbuku {
+        background: #5AB885 ;
+    }
+    .form-tbh-agt{
+        width: 85vw;
+    }
+}
+
+@media screen and (max-width: 428px) {
+    .div-carianggota button {
+        top: -45px;
+        left: 72vw;
+    }
+
+    .div-carianggota input {
+        width: 140%;
+    }
+    .flip-card {
+        min-width: 100% !important;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .div-tombol {
+        margin-bottom: 20px;
+    }
+
+    .div-pmn-buku {
+        background: none;
+    }
+
+    .flip-card {
+        min-width: 46%;
+    }
 }

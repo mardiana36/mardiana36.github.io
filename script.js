@@ -10,7 +10,7 @@ function geserContain(idCheckbox,idElemen) {
   function geserElemen() {
     if (checkbox.checked) {
       // Checkbox dicentang, geser elemen sejauh 240px ke kanan
-      container.style.marginLeft = '240px';
+      container.style.marginLeft = '160px';
     } else {
       // Checkbox tidak dicentang, kembalikan elemen ke posisi semula
       container.style.marginLeft = '0';
@@ -112,4 +112,19 @@ function flipCard(card) {
   card.classList.toggle("flipped");
 }
 
+function maxwidth() {
+  var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+  const checkbox = document.getElementById('togel');
+  
+  if (screenWidth <= 475) {
+    checkbox.checked = false;
+  } else {
+    checkbox.checked = true;
+  }
+}
+
+// Panggil fungsi maxwidth saat halaman dimuat
+window.addEventListener('load', function() {
+  maxwidth('togel');
+});
 

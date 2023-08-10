@@ -2,7 +2,7 @@
 <nav class="nav-dashboard" id="nav-ds">
     <div>
         <div class="div-drop">
-            <input type="checkbox" checked name="togel" id="togel">
+            <input type="checkbox" checked  name="togel" id="togel">
             <label for="togel" id="icon-menu"><img src="aset/gambar/icons8-menu-78.png" alt=""></label>
             <label for="togel" id="icon-drop"><img src="aset/gambar/icons8-downward-64.png" alt=""></label>
             <label for="togel">MENU</label>
@@ -18,7 +18,7 @@
                         <a href="dataBuku.php">Data Buku</a>
                     </li>
                     <li <?= isset($activePage) && $activePage === 'pinjamKembalikan' ? 'class="active"' : ''; ?>>
-                        <a href="pinjamDanKembalikan.php">PINJAMKAN & KEMBALIKAN</a>
+                        <a href="pinjamDanKembalikan.php">Pinjam / Kembalikan </a>
                     </li>
                 </ul>
             </div>

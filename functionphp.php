@@ -97,7 +97,7 @@ function hapus($kode, $dataBase)
     return $eror;
 }
 
-function total($dataBase,)
+function total($dataBase)
 {
     global $connection;
     $query = "SELECT COUNT(*) AS total FROM $dataBase";
@@ -165,8 +165,8 @@ function cariPK($key, $tableName, $keySearch)
     if (!empty($key)) {
         $query = "SELECT * FROM $tableName
         WHERE 
-        $keySearch[0] LIKE '%$key%' OR
-        $keySearch[1] LIKE '%$key%'
+        $keySearch[0] LIKE '$key%' OR
+        $keySearch[1] LIKE '$key%'
         ";
         return query($query);
     } else {
