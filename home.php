@@ -1,3 +1,16 @@
+<?php
+require 'functionphp.php';
+$tableName = 'buku';
+$dataBuku = query("SELECT * FROM buku LIMIT 5");
+$keySearch = ['judul', 'namaP'];
+if (isset($_POST["cari"])) {
+    if (cariPK($_POST["search"], $tableName, $keySearch) != 0) {
+        $dataBuku = cariPK($_POST["search"], $tableName, $keySearch);
+    } else {
+        $dataBuku = query("SELECT * FROM buku LIMIT 5");
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,8 +38,9 @@
                 </div>
                 <div class="content-dlm">
                     <img onclick="fokusForm()" src="aset/gambar/orang-nunjuk.png" alt="">
-                    <form action="" id = "cari-buku">
-                        <input type="search" name="search" id="search" placeholder="Judul Buku...">
+                    <form action="" id="cari-buku" method="post">
+                        <input type="search" name="search" id="search" value="<?= isset($_POST['search']) ? $_POST['search'] : '' ?>" placeholder="Judul Buku/Nama Pengarang...">
+                        <input type="hidden" name="cari"></input>
                     </form>
                     <p>Buku Adalah Gerbang Dunia Dan Membaca Adalah Kuncinya</p>
                 </div>
@@ -36,11 +50,33 @@
             </div>
             <!-- mengabil dari gambar data base rencananya-->
             <div class="content-home-2">
-                <div><img src="aset/gambar/buku.jpg" alt=""></div>
-                <div><img src="aset/gambar/buku.jpg" alt=""></div>
-                <div><img src="aset/gambar/buku.jpg" alt=""></div>
-                <div><img src="aset/gambar/buku.jpg" alt=""></div>
-                <div><img src="aset/gambar/buku.jpg" alt=""></div>
+                <?php foreach ($dataBuku as $bk) : ?>
+                    <div class="flip-card" onclick="flipCard(this)">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front"><img src="aset/gambar/database/<?= $bk['foto'] ?>" alt=""></div>
+                            <div class="flip-card-back">
+                                <h3><?= $bk["judul"] ?></h3>
+                                <table>
+                                    <tr>
+                                        <td>Pengarang</td>
+                                        <td>:</td>
+                                        <td><?= $bk["namaP"] ?></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Tahun Terbit</td>
+                                        <td>:</td>
+                                        <td><?= $bk["tahun"] ?></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Stok Buku</td>
+                                        <td>:</td>
+                                        <td><?= $bk["stok"] ?></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
             </div>
         </div>
     </div>

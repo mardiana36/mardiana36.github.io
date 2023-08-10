@@ -8,6 +8,8 @@ if ($dataBase == "anggota"){
 $namaFile = "dataAnggota.php";
 } else if ($dataBase == "buku"){
     $namaFile = "dataBuku.php";
+}else if ($dataBase == "pinjamkem"){
+    $namaFile = "pinjamDanKembalikan.php";
 }
 if( hapus($kode,$dataBase) > 0){
     echo "

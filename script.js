@@ -58,5 +58,58 @@ function setActiveLink(link) {
   link.classList.add('aktive');
 }
 
+function handleRadioChange() {
+  const todayRadio = document.querySelector('input[name="buku"]:checked');
+
+  if (todayRadio.value === "1") {
+      let tanggalInput = document.getElementById('tgl-pjm');
+      // Jika radio "Peminjaman" dipilih, atur nilai tanggal input ke tanggal hari ini
+      if(tanggalInput.value === ''){
+          const today = new Date();
+          const year = today.getFullYear();
+          let month = today.getMonth() + 1;
+          if (month < 10) {
+              month = '0' + month;
+          }
+          let day = today.getDate();
+          if (day < 10) {
+              day = '0' + day;
+          }
+          const formattedDate = `${year}-${month}-${day}`;
+          tanggalInput.value = formattedDate;
+      }
+      
+  } else if (todayRadio.value === "0") {
+      let tanggalInput = document.getElementById('tgl-pgl');
+      // Jika radio "Pengembalian" dipilih, atur nilai tanggal input ke tanggal hari ini
+  
+          const today = new Date();
+          const year = today.getFullYear();
+          let month = today.getMonth() + 1;
+          if (month < 10) {
+              month = '0' + month;
+          }
+          let day = today.getDate();
+          if (day < 10) {
+              day = '0' + day;
+          }
+          const formattedDate = `${year}-${month}-${day}`;
+          tanggalInput.value = formattedDate;
+  }
+  
+}
+function showPopupDate(element) {
+  const date = element.getAttribute('data-date');
+  const popupDate = element.nextElementSibling;
+  if (popupDate.style.display === 'none' || popupDate.textContent !== date) {
+      popupDate.textContent = date; // Atur tanggal ke elemen popup
+      popupDate.style.display = 'block';
+  } else {
+      popupDate.style.display = 'none';
+  }
+}
+function flipCard(card) {
+  card.classList.toggle("flipped");
+}
 
 

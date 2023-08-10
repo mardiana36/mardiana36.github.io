@@ -2,7 +2,10 @@
 require 'functionphp.php';
 cekLogin();
 $totalAgt = total("anggota");
+$totalpm = total("pinjamkem");
+$totalbk = sum("buku", "stok");
 $activePage = 'dashboard';
+$dataBuku = query("SELECT * FROM buku ORDER BY stok DESC LIMIT 4")
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -32,14 +35,14 @@ $activePage = 'dashboard';
                 <div><img src="aset/gambar/Rectangle 50.png" alt=""></div>
                 <div>
                     <p>Buku</p>
-                    <p>100</p>
+                    <p><?= $totalbk ?></p>
                 </div>
             </div>
             <div class="card-dashboard">
                 <div><img src="aset/gambar/Rectangle 51.png" alt=""></div>
                 <div>
                     <p>Peminjam</p>
-                    <p>2</p>
+                    <p><?= $totalpm; ?></p>
                 </div>
             </div>
         </div>
@@ -50,47 +53,35 @@ $activePage = 'dashboard';
             <p>Buku Terpopuler</p>
         </div>
         <div class="card-dashboard2">
+            <?php foreach($dataBuku as $bk): ?>
             <div class="card-div">
                 <div class="caver-div">
                     <div class="front-caver">
-                        <img src="aset/gambar/buku.jpg" alt="">
+                        <img src="aset/gambar/database/<?= $bk['foto'] ?>" alt="">
                     </div>
                     <div class="back-caver">
-                        <p>TEXT</p>
+                        <h3><?= $bk["judul"] ?></h3>
+                        <table id="tb-ds" >
+                            <tr>
+                                <td>Penerbit/Pengarang</td>
+                                <td>:</td>
+                                <td><?= $bk["namaP"] ?></td>
+                            </tr>
+                            <tr>
+                                <td>Tahun Terbit</td>
+                                <td>:</td>
+                                <td><?= $bk["tahun"] ?></td>
+                            </tr>
+                            <tr>
+                                <td>Stok Buku</td>
+                                <td>:</td>
+                                <td><?= $bk["stok"] ?></td>
+                            </tr>
+                        </table>
                     </div>
                 </div>
             </div>
-            <div class="card-div">
-                <div class="caver-div">
-                    <div class="front-caver">
-                        <img src="aset/gambar/buku.jpg" alt="">
-                    </div>
-                    <div class="back-caver">
-                        <p>TEXT</p>
-                    </div>
-                </div>
-            </div>
-            <div class="card-div">
-                <div class="caver-div">
-                    <div class="front-caver">
-                        <img src="aset/gambar/buku.jpg" alt="">
-                    </div>
-                    <div class="back-caver">
-                        <p>TEXT</p>
-                    </div>
-                </div>
-            </div>
-            <div class="card-div">
-                <div class="caver-div">
-                    <div class="front-caver">
-                        <img src="aset/gambar/buku.jpg" alt="">
-                    </div>
-                    <div class="back-caver">
-                        <p>TEXT</p>
-                    </div>
-                </div>
-            </div>
-           
+           <?php endforeach; ?>
         </div>
     </main>
     <?php include 'footer.php'; ?>

@@ -1,16 +1,30 @@
 <?php
 require 'functionphp.php';
+require 'koneksi.php';
 cekLogin();
-$tableName = "anggota";
-$keySearch = ['nama', 'formatKode', 'kode'];
-$data = maxData($tableName, 5);
-$jumlahHalaman = $data['jumlahHalaman'];
-$halamanAktif = $data["halamanAktif"];
-$dataAnggota = $data['data'];
-if (isset($_POST["cari"])) {
-    $dataAnggota =  cari($_POST["key"], $tableName, $keySearch);
-}
 $activePage = 'dataAnggota';
+$tableName = "anggota";
+$keySc = ['nama', 'formatKode', 'kode'];
+if(isset($_POST['cari'])){
+    $key = $_POST['key'];
+    $_SESSION['key'] = $key;
+}elseif (isset($_SESSION['key']) && empty($_GET['p'])) {
+    unset($_SESSION['key']);
+    $key = '';
+}
+else{
+    $key = isset($_SESSION['key']) ? $_SESSION['key'] : '';
+}
+
+$data = cariTabel($tableName,$key,$keySc);
+$jumlahHalaman = $data['jh'];
+$halamanAktif = $data['ha'];
+$awalData = $data['ad'];
+
+$ambilData_perhalaman = $data['data'];
+
+$startno = $data['startno'];
+$endno = $data['endno'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -33,8 +47,8 @@ $activePage = 'dataAnggota';
             </div>
             <div class="div-carianggota">
                 <form action="" method="post" id="cari-agt">
-                    <input type="search" name="key" placeholder="Nama/Kode Angota...">
-                    <button type="" name="cari" alt="" id="cari"> <img src="aset/gambar/icons8-search-64.png" alt="Search"></button>
+                    <input type="search" name="key" value="<?= $key ?>" placeholder="Nama/Kode Angota...">
+                    <button type="" name="cari" value="cari data" alt="" id="cari"> <img src="aset/gambar/icons8-search-64.png" alt="Search"></button>
                 </form>
             </div>
         </div>
@@ -50,8 +64,8 @@ $activePage = 'dataAnggota';
                     <th>Kode Anggota</th>
                     <th>Aksi</th>
                 </tr>
-                <?php $no = 1;?>
-                <?php foreach ($dataAnggota as $da) : ?>
+                <?php $no = $awalData+1; ?>
+                <?php foreach ($ambilData_perhalaman as $da) : ?>
                     <tr class="tr-body">
                         <td class="td-no"><?= $no . '.'; ?></td>
                         <td><img width="100" src="aset/gambar/database/<?= $da["foto"]; ?>" alt=""></td>
@@ -75,7 +89,14 @@ $activePage = 'dataAnggota';
             </table>
         </div>
         <div class="div-nextpage">
-            <?php for ($i = 1; $i <= $jumlahHalaman; $i++) : ?>
+            <?php if ($halamanAktif > 1) : ?>
+                <div>
+                    <a class="next-page colorGreen" href="?p=<?= $halamanAktif - 1 ?>">
+                    &laquo; prev
+                    </a>
+                </div>
+            <?php endif; ?>
+            <?php for ($i = $startno; $i <= $endno; $i++) : ?>
                 <?php if ($i == $halamanAktif) : ?>
                     <div><a class="next-page colordarkGreen" href="?p=<?= $i ?>"><?= $i; ?></a></div>
                 <?php else : ?>
@@ -83,6 +104,14 @@ $activePage = 'dataAnggota';
                 <?php endif; ?>
 
             <?php endfor; ?>
+
+            <?php if ($halamanAktif < $jumlahHalaman) : ?>
+                <div>
+                    <a class="next-page colorGreen" href="?p=<?= $halamanAktif +1 ?>">
+                    next &raquo;
+                    </a>
+                </div>
+            <?php endif; ?>
         </div>
     </main>
     <?php include 'footer.php'; ?>
